@@ -6,7 +6,7 @@ The current version of the plugin focuses on rubble masonry (and this also leads
 
 # Download
 
-Currently, the plugin is actually not made available as just a plugin .dll  that can be added to already installed versions of CloudCompare. Instead, we have packaged the plugin (actually there are two plugins; one for each tool) and CloudCompare together in a standalone Windows 10 64bit application (may work in Windows 8 as well). You only need to download the latest version available in the Releases section, unzip it and launch the CloudCompare executable it contains. The folder also contains a detailed manual explaining how to use the plugin. As per the requirements of the [GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) license, the source code of our plugin is however freely available.
+Currently, the plugin is actually not made available as just a plugin .dll  that can be added to already installed versions of CloudCompare. Instead, we have packaged the plugin (actually there are two plugins; one for each tool) and CloudCompare together in a standalone Windows 10 64bit application (may work in Windows 8 as well). You only need to download the latest version available in the Releases section, unzip it and launch the CloudCompare executable it contains. The folder also contains a detailed manual explaining how to use the plugin. As per the requirements of the [GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) license, the source code of our plugin is freely available.
 
 Some point clouds of masonry walls for testing can be found in the `datasets` folder.
 
