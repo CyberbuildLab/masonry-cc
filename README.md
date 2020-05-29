@@ -1,3 +1,5 @@
+WARNING: We have been made aware that some users are experiencing an error when launching the software (error "Application failed to start because platform plugin “windows” is missing"). We are currently investigating the source of the error that we had never experienced despite numerous trials.
+
 # Intro
 
 As part of the Historic Digital Survey ([HDS](https://cyberbuild.eng.ed.ac.uk/projects/historic-digital-survey)) research work, we have developed the Masonry Segmentation CloudCompare Plugin, which is a plugin for [CloudCompare](https://www.danielgm.net/cc/) that enables the segmentation of dense point clouds (principally from laser scanning) of masonry structures into their individual stones.
