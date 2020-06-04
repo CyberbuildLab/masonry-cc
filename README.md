@@ -1,4 +1,4 @@
-WARNING: We have been made aware that some users are experiencing an error when launching the software (error "Application failed to start because platform plugin “windows” is missing"). We are currently investigating the source of the error that we had never experienced despite numerous trials.
+
 
 # Intro
 
