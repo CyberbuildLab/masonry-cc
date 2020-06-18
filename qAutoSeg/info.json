@@ -1,0 +1,39 @@
+{
+  "type": "Standard",
+  "name": "AutoSeg",
+  "icon": "/CC/plugin/private/qAutoSeg/cyberbuildIcon.png",
+  "description": "Automatic segmentation using CWT",
+  "authors": [
+    {
+      "name": "Enrique Valero (Cyberbuild Lab)",
+      "email": "e.valero@ed.ac.uk"
+    },
+	{
+      "name": "Frederic Bosche (Cyberbuild Lab)",
+      "email": "f.bosche@ed.ac.uk"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Enrique Valero (Cyberbuild Lab)",
+      "email": "e.valero@ed.ac.uk"
+    },
+    {
+      "name": "Frederic Bosche (Cyberbuild Lab)",
+      "email": "f.bosche@ed.ac.uk"
+    }
+  ],
+  "references": [
+    {
+      "text": "",
+      "url": ""
+    },
+    {
+      "text": "",
+      "url": ""
+    },
+    {
+      "text": ""
+    }
+  ]
+}

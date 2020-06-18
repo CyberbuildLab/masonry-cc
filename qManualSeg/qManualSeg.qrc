@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/CC/plugin/qManualSeg" >
+    <file>cyberbuildIcon.png</file>
+    <file>info.json</file>
+  </qresource>
+</RCC>

@@ -1,2 +1,0 @@
-@set PATH=.
-CloudCompare.exe

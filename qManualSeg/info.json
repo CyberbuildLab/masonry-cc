@@ -1,0 +1,40 @@
+{
+  "type": "Standard",
+  "name": "ManualSeg",
+  "icon": "/CC/plugin/private/qManualSeg/cyberbuildIcon.png",
+  "description": "Manual segmentation of stones/mortar",
+  "authors": [
+    {
+      "name": "Enrique Valero (Cyberbuild Lab)",
+      "email": "e.valero@ed.ac.uk"
+    },
+	{
+      "name": "Frederic Bosche (Cyberbuild Lab)",
+      "email": "f.bosche@ed.ac.uk"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Enrique Valero (Cyberbuild Lab)",
+      "email": "e.valero@ed.ac.uk"
+    },
+	{
+      "name": "Frederic Bosche (Cyberbuild Lab)",
+      "email": "f.bosche@ed.ac.uk"
+    }
+  ],
+  "references": [
+    {
+      "text": "",
+      "url": ""
+    },
+    {
+      "text": "",
+      "url": ""
+    },
+    {
+      "text": ""
+    }
+  ]
+}
+
