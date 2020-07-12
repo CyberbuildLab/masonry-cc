@@ -1,0 +1,8 @@
+MASONRY PLUGINS (qAutoSeg and qManuSeg)
+
+The plugins are distributed under the GPLv2 license, which is compatible with the licensing of CloudCompare.
+
+The plugins are thus free software; you can redistribute it and/or modify  it under the terms of the license.
+
+The plugins are distributed in the hope that they will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the license for details.
+

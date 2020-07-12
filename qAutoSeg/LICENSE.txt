@@ -1,4 +1,4 @@
-MASONRY PLUGINS
+MASONRY PLUGINS (qAutoSeg and qManuSeg)
 
 The plugins are distributed under the GPLv2 license, which is compatible with the licensing of CloudCompare.
 
