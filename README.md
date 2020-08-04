@@ -16,7 +16,7 @@ If you are interested in the source code, please contact Frédéric Bosché at [
 
 # Test Dataset
 
-Some test datasets are available at doi:10.7488/ds/2892 (University of Edinburgh's DataShare site).
+Some test datasets are available at [https://doi.org/10.7488/ds/2892](https://doi.org/10.7488/ds/2892) (University of Edinburgh's DataShare site).
 
 # Feedback and Acknowledgement
 
