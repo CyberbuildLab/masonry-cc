@@ -14,6 +14,10 @@ Some point clouds of masonry walls for testing can be found in the `datasets` fo
 
 If you are interested in the source code, please contact Frédéric Bosché at [f.bosche@ed.ac.uk](mailto:f.bosche@ed.ac.uk?subject=Source%20code%20of%20the%20CC%20Plugin).
 
+# Test Dataset
+
+Some test datasets are available at doi:10.7488/ds/2892 (University of Edinburgh's DataShare site).
+
 # Feedback and Acknowledgement
 
 For any feedback about the plugin, please contact Frédéric Bosché at [f.bosche@ed.ac.uk](mailto:f.bosche@ed.ac.uk?subject=Source%20code%20of%20the%20CC%20Plugin).
