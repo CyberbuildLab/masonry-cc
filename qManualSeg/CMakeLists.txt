@@ -1,37 +1,36 @@
 cmake_minimum_required( VERSION 3.0 )
 
 # CloudCompare Masonry Manual Segmentation plugin
-option( INSTALL_QMANUAL_SEG_PLUGIN "Check to install qManualSeg plugin" OFF )
+option( PLUGIN_STANDARD_MASONRY_QMANUAL_SEG "Check to install qManualSeg plugin" OFF )
 
-if ( INSTALL_QMANUAL_SEG_PLUGIN )
+if ( PLUGIN_STANDARD_MASONRY_QMANUAL_SEG )
 
     project( QMANUAL_SEG_PLUGIN )
     
-	#include( ../../CMakePluginTpl.cmake )
     AddPlugin( NAME ${PROJECT_NAME} )
 
 
-target_sources( ${PROJECT_NAME}
-	PRIVATE
-		${CMAKE_CURRENT_LIST_DIR}/qManualSeg.h
-		${CMAKE_CURRENT_LIST_DIR}/qManualSeg.cpp
-		${CMAKE_CURRENT_LIST_DIR}/profileImportDlg.h
-		${CMAKE_CURRENT_LIST_DIR}/profileImportDlg.cpp
-		${CMAKE_CURRENT_LIST_DIR}/profileImportDlg.ui
-)
+	target_sources( ${PROJECT_NAME}
+		PRIVATE
+			${CMAKE_CURRENT_LIST_DIR}/qManualSeg.h
+			${CMAKE_CURRENT_LIST_DIR}/qManualSeg.cpp
+			${CMAKE_CURRENT_LIST_DIR}/profileImportDlg.h
+			${CMAKE_CURRENT_LIST_DIR}/profileImportDlg.cpp
+			${CMAKE_CURRENT_LIST_DIR}/profileImportDlg.ui
+	)
 
-target_include_directories( ${PROJECT_NAME}
-	PRIVATE
-		${CMAKE_CURRENT_SOURCE_DIR}
-)
+	target_include_directories( ${PROJECT_NAME}
+		PRIVATE
+			${CMAKE_CURRENT_SOURCE_DIR}
+	)
  
 	# Find Packages
 	# Find PCL
-	set( PCL_DIR "C:/Program Files/PCL 1.9.1")
+	#set( PCL_DIR "C:/Program Files/PCL 1.9.1") #DGM: can't do that as it will obviously conflict with most of the users settings ;)
 	find_package( PCL 1.9.1 REQUIRED )
 
 	# Find OpenCV
-	set( OpenCV_DIR "C:/opencv/build" )
+	#set( OpenCV_DIR "C:/opencv/build" ) #DGM: can't do that as it will obviously conflict with most of the users settings ;)
 	find_package( OpenCV REQUIRED )
 
 	if( PCL_FOUND AND OpenCV_FOUND )
