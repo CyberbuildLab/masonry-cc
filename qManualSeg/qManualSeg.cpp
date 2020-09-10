@@ -58,8 +58,9 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
-#include<iostream>
+#include <iostream>
 #include <fstream>
+#include <random>
 
 
 #include<algorithm>
