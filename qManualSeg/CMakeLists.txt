@@ -33,24 +33,34 @@ if ( PLUGIN_STANDARD_MASONRY_QMANUAL_SEG )
 	#set( OpenCV_DIR "C:/opencv/build" ) #DGM: can't do that as it will obviously conflict with most of the users settings ;)
 	find_package( OpenCV REQUIRED )
 
+	if (WIN32)
+		# We need to copy the OpenCV "World" DLL file next to CloudCompare.exe
+		set( OpenCV_WORLD_DLL "" CACHE FILEPATH "Opencv 'World' DLL file path" )
+	endif()
+
 	if( PCL_FOUND AND OpenCV_FOUND )
-	  # [C/C++]>[General]>[Additional Include Directories]
-	  include_directories( ${PCL_INCLUDE_DIRS} )
-	  include_directories( ${OpenCV_INCLUDE_DIRS} )
+		# [C/C++]>[General]>[Additional Include Directories](
+		include_directories( ${PCL_INCLUDE_DIRS} )
+		include_directories( ${OpenCV_INCLUDE_DIRS} )
 
-	  # [C/C++]>[Preprocessor]>[Preprocessor Definitions]
-	  add_definitions( ${PCL_DEFINITIONS} )
+		# [C/C++]>[Preprocessor]>[Preprocessor Definitions]
+		add_definitions( ${PCL_DEFINITIONS} )
 
-	  # For Use Not PreCompiled Features 
-	  #add_definitions( -DPCL_NO_PRECOMPILE )
+		# For Use Not PreCompiled Features 
+		#add_definitions( -DPCL_NO_PRECOMPILE )
 
-	  # [Linker]>[General]>[Additional Library Directories]
-	  link_directories( ${PCL_LIBRARY_DIRS} )
-	  link_directories( ${OpenCV_LIB_DIR} )
+		# [Linker]>[General]>[Additional Library Directories]
+		link_directories( ${PCL_LIBRARY_DIRS} )
+		link_directories( ${OpenCV_LIB_DIR} )
 
-	  # [Linker]>[Input]>[Additional Dependencies]
-	  target_link_libraries( QMANUAL_SEG_PLUGIN ${PCL_LIBRARIES} )
-	  target_link_libraries( QMANUAL_SEG_PLUGIN ${OpenCV_LIBS} )
+		# [Linker]>[Input]>[Additional Dependencies]
+		target_link_libraries( QMANUAL_SEG_PLUGIN ${PCL_LIBRARIES} )
+		target_link_libraries( QMANUAL_SEG_PLUGIN ${OpenCV_LIBS} )
+
+		if (WIN32 AND OpenCV_WORLD_DLL)
+			copy_files("${OpenCV_WORLD_DLL}" ${CLOUDCOMPARE_DEST_FOLDER} )
+		endif()
+
 	endif()
 
 endif()
