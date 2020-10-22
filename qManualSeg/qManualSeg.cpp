@@ -699,7 +699,6 @@ ccPointCloud* getMortarMaps(ccPointCloud* f_cloudStones, ccPointCloud* f_cloudMo
 	kdtree.setInputCloud(pcl_cloudStones);
 
 
-	unsigned int nnIdx;
 	vector<double> distStD, dist3St, distStD2;
 	vector<double> distStWidth;
 	vector<double> distStW;
@@ -756,7 +755,7 @@ ccPointCloud* getMortarMaps(ccPointCloud* f_cloudStones, ccPointCloud* f_cloudMo
 							dist1 = dist3;
 						dist1y = disty;
 					}
-					if (idxSt != idx1 & idx2 == -1) { //Initialise stone 2
+					if (idxSt != idx1 && idx2 == -1) { //Initialise stone 2
 						idx2 = idxSt;
 						dist2 = dist3;
 						dist2y = disty;
@@ -772,11 +771,11 @@ ccPointCloud* getMortarMaps(ccPointCloud* f_cloudStones, ccPointCloud* f_cloudMo
 			} //Points are ordered by radius. Idx 0 is the nearest neighbour
 
 			//For each point, there is dist1 or dist1 and dist2
-			if (idx1 > -1 & idx2 == -1 & dist1 < 1000) { //Only one stone (boundaries of wall)
+			if (idx1 > -1 && idx2 == -1 && dist1 < 1000) { //Only one stone (boundaries of wall)
 				distStW.push_back(dist1 * 1000);
 				distStD2.push_back(dist1y * 1000);
 			}
-			else if (idx1 > -1 & idx2 > -1) {
+			else if (idx1 > -1 && idx2 > -1) {
 				distStW.push_back((dist1 + dist2) * 1000);
 				distStD2.push_back((dist1y + dist2y) / 2 * 1000);
 			}
@@ -904,8 +903,6 @@ void ccManualSeg::doAction()
 
 	//Check loaded point clouds (there should be 2: base and segmented)
 	ccHObject* root = m_app->dbRootObject();
-	ccPointCloud* segmentCloud;
-
 
 	std::vector<int> idxPoly;
 	int idxStone = -1;
