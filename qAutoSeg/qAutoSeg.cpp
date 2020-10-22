@@ -93,7 +93,7 @@
 #include <ScalarFieldTools.h>
 #include <SimpleMesh.h>
 
-#include <kdtree.h>
+//#include <kdtree.h>
 
 #include <ctime>
 
@@ -762,7 +762,7 @@ Mat conjugate(Mat_<std::complex<double>> M1, bool *flag)
 	} //If there is no complex part
 	catch (const std::exception & e) {
 		M3 = M1;
-		flag = false;
+		*flag = false;
 		return M3;
 	}
 
