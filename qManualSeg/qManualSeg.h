@@ -42,9 +42,9 @@ private:
 	void doAction();
 	void doAction2();
 
-	std::vector<int> ccManualSeg::pointIdx(ccPointCloud* cloud, ccPolyline* poly);
-	std::vector<int> ccManualSeg::stIdFromPtId(std::vector<int> pts, std::vector<std::pair<int, int>> pairs);
-	std::vector<int> ccManualSeg::ptIdFromStId(std::vector<int> pts , std::vector<std::pair<int,int>> pairs);
+	std::vector<int> pointIdx(ccPointCloud* cloud, ccPolyline* poly);
+	std::vector<int> stIdFromPtId(std::vector<int> pts, std::vector<std::pair<int, int>> pairs);
+	std::vector<int> ptIdFromStId(std::vector<int> pts , std::vector<std::pair<int,int>> pairs);
 
 
 	QAction* m_action;
