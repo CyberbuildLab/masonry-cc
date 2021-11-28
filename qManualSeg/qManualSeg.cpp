@@ -75,9 +75,9 @@ using namespace cv;
 ccManualSeg::ccManualSeg( QObject *parent )
 	: QObject( parent )
 	, ccStdPluginInterface( ":/CC/plugin/qManualSeg/info.json" )
-	, m_action(0)
-	, m_segmentationPoly(0)
-	, m_polyVertices(0)
+	, m_action(nullptr)
+	, m_segmentationPoly(nullptr)
+	, m_polyVertices(nullptr)
 {
 	m_polyVertices = new ccPointCloud("vertices");
 	m_segmentationPoly = new ccPolyline(m_polyVertices);
