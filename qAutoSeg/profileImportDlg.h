@@ -28,7 +28,7 @@ class ProfileImportDlg : public QDialog, public Ui::ProfileImportDlg
 public:
 
 	//! Default constructor
-    explicit ProfileImportDlg(QWidget* parent = 0);
+    explicit ProfileImportDlg(QWidget* parent = nullptr);
 
 
 protected slots:
