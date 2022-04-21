@@ -23,7 +23,7 @@ For any feedback about the plugin, please contact Frédéric Bosché at [f.bosch
 Furthermore, if you have used this plugin for work that is subsequently published, please acknowledge the plugin by citing one of the following publications (or ideally both):
 
 - Valero, E., Bosché, F., Forster, A., M'Beirick, I., Wilson, L., Turmel, A. & Hyslop, E. (2019), "Development of a novel open tool for the segmentation of 3D point clouds of masonry walls", 
-14th International Congress on the Deterioration and Conservation of Stone (Stone 2020), to appear.
+14th International Congress on the Deterioration and Conservation of Stone, STTONE 2020, Germany. [PDF](https://cyberbuild.eng.ed.ac.uk/sites/cyberbuild.eng.ed.ac.uk/files/attachments/freestyle-page/20200801/Valero_2020_Stone.pdf)
 
 - Valero, E., Bosché, F. & Forster, A., (2018), "Automatic Segmentation of 3D Point Clouds of Rubble Masonry Walls, and its Application to Building Surveying, Repair and Maintenance", Automation in Construction, Vol. 96, pp. 29-39, doi:10.1016/j.autcon.2018.08.018. [PDF](https://cyberbuild.eng.ed.ac.uk/sites/cyberbuild.eng.ed.ac.uk/files/attachments/freestyle-page/20200217/segmentation%20paper_r1_0.pdf) | [web](https://doi.org/10.1016/j.autcon.2018.08.018)
 
