@@ -27,7 +27,7 @@ Furthermore, if you have used this plugin for work that is subsequently publishe
 
 - Valero, E., Bosché, F. & Forster, A., (2018), "Automatic Segmentation of 3D Point Clouds of Rubble Masonry Walls, and its Application to Building Surveying, Repair and Maintenance", Automation in Construction, Vol. 96, pp. 29-39, doi:10.1016/j.autcon.2018.08.018. [PDF](https://cyberbuild.eng.ed.ac.uk/sites/cyberbuild.eng.ed.ac.uk/files/attachments/freestyle-page/20200217/segmentation%20paper_r1_0.pdf) | [web](https://doi.org/10.1016/j.autcon.2018.08.018)
 
-- Valero, E, Bosché, F. (2020). Masonry segmentation plugin for CloudCompare, [software]. Cyberbuild Lab. The University of Edinburgh. doi:10.7488/ds/2892
+- Valero, E, Bosché, F. (2020). Masonry segmentation plugin for CloudCompare, [software]. Cyberbuild Lab. The University of Edinburgh. doi:10.7488/ds/2892. [web](https://doi.org/10.7488/ds/2892)
 
 # Contributors and our own Acknowledgements
 
