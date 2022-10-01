@@ -16,9 +16,6 @@
 //#                                                                        #
 //##########################################################################
 
-
-#define CV_PCA_DATA_AS_ROW 150
-
 #include "qAutoSeg.h"
 
 #include <pcl/point_cloud.h>
@@ -1469,7 +1466,7 @@ void ccAutoSeg::doAction()
 	}
 
 	cv::Mat_<double> mean;
-	cv::PCA pca(cldm, mean, CV_PCA_DATA_AS_ROW);
+	cv::PCA pca(cldm, mean, 150);
 
 	cv::Vec3d nrm = pca.eigenvectors.row(2); nrm = nrm / norm(nrm);
 	cv::Vec3d x0 = pca.mean;
