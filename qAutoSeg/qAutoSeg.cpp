@@ -18,17 +18,14 @@
 
 #include "qAutoSeg.h"
 
+//Local
+#include "profileImportDlg.h"
+
+//PCL
 #include <pcl/point_cloud.h>
 #include <pcl/kdtree/kdtree_flann.h>
 #include <pcl/common/common.h>
 #include <pcl/common/transforms.h>
-
-
-#include <random>
-
-
-//Local
-#include "profileImportDlg.h"
 
 //Qt
 #include <QtGui>
@@ -38,8 +35,6 @@
 #include <QMessageBox>
 #include <QTextStream>
 #include <QMainWindow>
-
-#include <unordered_set>
 
 //qCC_db
 #include <ccFileUtils.h>
@@ -51,34 +46,32 @@
 #include <ccCone.h>
 #include <ccScalarField.h>
 #include <ccGLWindow.h>
-//#include<C:\CloudCompare\trunk\qCC\ccContourExtractor.h>
-//#include<C:\CloudCompare\trunk\CC\include\GenericIndexedCloudPersist.h>
-//#include <ccContourExtractor.h>
-//#include <ccContourLinesGenerator.h>
-#include <GenericIndexedCloudPersist.h>
 
-
-//IO
+//qCCIO
 #include <PlyFilter.h>
 
-//CWT
-#define _USE_MATH_DEFINES
-#include <cmath>
-#include <iostream>
-#include <fstream>
+//OpenCV
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/imgcodecs.hpp>
+
+//System
+#define _USE_MATH_DEFINES
+#include <cmath>
+#include <iostream>
+#include <fstream>
+#include <unordered_set>
+#include <random>
 #include <algorithm>
 #include <list>
 #include <numeric>
 #include <random>
 #include <vector>
+#include <ctime>
 
-
-//Subsampling pointclouds
+//CCCoreLib
 #include <CloudSamplingTools.h>
 #include <DistanceComputationTools.h>
 #include <DgmOctreeReferenceCloud.h>
@@ -89,12 +82,6 @@
 #include <ScalarField.h>
 #include <ScalarFieldTools.h>
 #include <SimpleMesh.h>
-
-//#include <kdtree.h>
-
-#include <ctime>
-
-
 
 ccAutoSeg::ccAutoSeg( QObject *parent )
 	: QObject( parent )

@@ -14,9 +14,6 @@ if ( PLUGIN_STANDARD_MASONRY_QMANUAL_SEG )
 		PRIVATE
 			${CMAKE_CURRENT_LIST_DIR}/qManualSeg.h
 			${CMAKE_CURRENT_LIST_DIR}/qManualSeg.cpp
-			${CMAKE_CURRENT_LIST_DIR}/profileImportDlg.h
-			${CMAKE_CURRENT_LIST_DIR}/profileImportDlg.cpp
-			${CMAKE_CURRENT_LIST_DIR}/profileImportDlg.ui
 	)
 
 	target_include_directories( ${PROJECT_NAME}

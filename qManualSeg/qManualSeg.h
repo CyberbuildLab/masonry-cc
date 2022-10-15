@@ -1,5 +1,4 @@
-#ifndef Q_MANUALSEG_HEADER
-#define Q_MANUALSEG_HEADER
+#pragma once
 
 //##########################################################################
 //#                                                                        #
@@ -33,30 +32,18 @@ public:
 	virtual ~ccManualSeg() = default;
 	
 	// inherited from ccStdPluginInterface
-	void onNewSelection( const ccHObject::Container &selectedEntities ) override;
 	QList<QAction *> getActions() override;
-
 
 private:
 
 	void doAction();
-	void doAction2();
 
-	std::vector<int> pointIdx(ccPointCloud* cloud, ccPolyline* poly);
-	std::vector<int> stIdFromPtId(std::vector<int> pts, std::vector<std::pair<int, int>> pairs);
-	std::vector<int> ptIdFromStId(std::vector<int> pts , std::vector<std::pair<int,int>> pairs);
-
+	//! Returns indexes of points inside a polyline from a point cloud
+	std::vector<unsigned> pointIdx(ccPointCloud* cloud, ccPolyline* poly) const;
+	//! Returns stone indexes given points idexes 
+	static std::vector<int> StIdFromPtId(const std::vector<unsigned>& pts, const std::vector<std::pair<unsigned, int>>& pairs);
+	//! Returns returns points indexes given stone indexes
+	static std::vector<unsigned> PtIdFromStId(const std::vector<int>& pts, const std::vector<std::pair<unsigned, int>>& pairs);
 
 	QAction* m_action;
-	
-
-protected:
-
-	//! Segmentation polyline
-	ccPolyline* m_segmentationPoly;
-	//! Segmentation polyline vertices
-	ccPointCloud* m_polyVertices;
-
 };
-
-#endif
