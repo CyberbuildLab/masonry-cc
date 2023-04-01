@@ -40,7 +40,7 @@
 #include <ccPolyline.h>
 #include <ccCone.h>
 #include <ccScalarField.h>
-#include <ccGLWindow.h>
+#include <ccGLWindowInterface.h>
 #include <ccGenericPointCloud.h>
 
 //CCCoreLib
@@ -106,7 +106,7 @@ vector<unsigned> ccManualSeg::pointIdx(ccPointCloud* cloud, ccPolyline* poly) co
 		return {};
 	}
 
-	ccGLWindow* win = m_app->getActiveGLWindow();
+	ccGLWindowInterface* win = m_app->getActiveGLWindow();
 	if (!win)
 	{
 		assert(false);
@@ -754,7 +754,7 @@ void ccManualSeg::doAction()
 	ofstream auto_seg_log;
 	auto_seg_log.open(filename);
 
-	ccGLWindow* win = m_app->getActiveGLWindow();
+	ccGLWindowInterface* win = m_app->getActiveGLWindow();
 	if (win)
 	{
 		win->setView(CC_FRONT_VIEW);

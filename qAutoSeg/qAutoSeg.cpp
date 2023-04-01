@@ -45,7 +45,7 @@
 #include <ccPolyline.h>
 #include <ccCone.h>
 #include <ccScalarField.h>
-#include <ccGLWindow.h>
+#include <ccGLWindowInterface.h>
 
 //qCCIO
 #include <PlyFilter.h>
@@ -1515,8 +1515,9 @@ void ccAutoSeg::doAction()
 
 
 	//If only alignment is required
-	if (checkAlignment == true && checkSegment == false && checkMortar == false){
-		ccGLWindow* win = m_app->getActiveGLWindow();
+	if (checkAlignment == true && checkSegment == false && checkMortar == false)
+	{
+		ccGLWindowInterface* win = m_app->getActiveGLWindow();
 		win->setView(CC_FRONT_VIEW);
 		return;
 	}
@@ -2465,15 +2466,9 @@ void ccAutoSeg::doAction()
 	if (checkMortar == true && allMortar.size() > 0)
 		m_app->addToDB(mortarMaps, true, true, false, true);
 
-
-
-
-
-	ccGLWindow* win = m_app->getActiveGLWindow();
-	win->setView(CC_FRONT_VIEW);
-
-
-
-
-
+	ccGLWindowInterface* win = m_app->getActiveGLWindow();
+	if (win)
+	{
+		win->setView(CC_FRONT_VIEW);
+	}
 }
