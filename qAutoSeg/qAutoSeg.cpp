@@ -133,7 +133,7 @@ double optRotY(ccPointCloud *&cloud) {
 	std::vector<int> v(cloud->size());
 	std::iota(v.begin(), v.end(), 0);
 	std::random_shuffle(v.begin(), v.end());
-	v.erase(v.begin(), v.begin() + (int)floor(cloud->size()));
+	v.erase(v.begin(), v.begin() + cloud->size());
 
 	for (size_t i = 0; i < cloud->size(); i++)
 	{
@@ -192,7 +192,7 @@ void rotY(ccPointCloud *&cloud, double th0) {
 	std::vector<int> v(cloud->size());
 	std::iota(v.begin(), v.end(), 0);
 	std::random_shuffle(v.begin(), v.end());
-	v.erase(v.begin(), v.begin() + (int)floor(cloud->size()));
+	v.erase(v.begin(), v.begin() + cloud->size());
 
 	for (size_t i = 0; i < cloud->size(); i++)
 	{
@@ -783,8 +783,8 @@ void cwt2d(double sca, Mat image, Mat &cwtcfs, Mat &bincfs)
 	int H = S.height;
 	int W = S.width;
 
-	int W2 = floor((W - 1) / 2);
-	int H2 = floor((H - 1) / 2);
+	int W2 = (W - 1) / 2;
+	int H2 = (H - 1) / 2;
 
 	std::vector<int> w1(W2 + 1); // vector with W2 ints.
 	std::iota(std::begin(w1), std::end(w1), 0);
