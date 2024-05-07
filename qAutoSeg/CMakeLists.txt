@@ -1,4 +1,4 @@
-cmake_minimum_required( VERSION 3.0 )
+cmake_minimum_required( VERSION 3.5 )
 
 # CloudCompare Masonry Manual Segmentation plugin
 option( PLUGIN_STANDARD_MASONRY_QAUTO_SEG "Check to install QAutoSeg plugin" OFF )
@@ -6,7 +6,7 @@ option( PLUGIN_STANDARD_MASONRY_QAUTO_SEG "Check to install QAutoSeg plugin" OFF
 if ( PLUGIN_STANDARD_MASONRY_QAUTO_SEG )
 
     project( QAUTO_SEG_PLUGIN )
-    
+
     AddPlugin( NAME ${PROJECT_NAME} )
 
 	target_sources( ${PROJECT_NAME}
@@ -31,7 +31,7 @@ if ( PLUGIN_STANDARD_MASONRY_QAUTO_SEG )
 	# Find OpenCV
 	#set( OpenCV_DIR "C:/opencv/build" ) #DGM: can't do that as it will obviously conflict with most of the users settings ;)
 	find_package( OpenCV REQUIRED )
-	
+
 	if (WIN32)
 		# We need to copy the OpenCV "World" DLL file next to CloudCompare.exe
 		set( OpenCV_WORLD_DLL "" CACHE FILEPATH "Opencv 'World' DLL file path" )
@@ -48,7 +48,7 @@ if ( PLUGIN_STANDARD_MASONRY_QAUTO_SEG )
 		# [C/C++]>[Preprocessor]>[Preprocessor Definitions]
 		add_definitions( ${PCL_DEFINITIONS} )
 
-		# For Use Not PreCompiled Features 
+		# For Use Not PreCompiled Features
 		#add_definitions( -DPCL_NO_PRECOMPILE )
 
 		# [Linker]>[General]>[Additional Library Directories]
@@ -67,7 +67,7 @@ if ( PLUGIN_STANDARD_MASONRY_QAUTO_SEG )
 				copy_files("${OpenCV_WORLD_DEBUG_DLL}" ${CLOUDCOMPARE_DEST_FOLDER} 2)
 			endif()
 		endif()
-	  
+
 	endif()
-	
+
 endif()
