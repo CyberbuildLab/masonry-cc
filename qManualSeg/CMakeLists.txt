@@ -1,4 +1,4 @@
-cmake_minimum_required( VERSION 3.0 )
+cmake_minimum_required( VERSION 3.5 )
 
 # CloudCompare Masonry Manual Segmentation plugin
 option( PLUGIN_STANDARD_MASONRY_QMANUAL_SEG "Check to install qManualSeg plugin" OFF )
@@ -6,7 +6,7 @@ option( PLUGIN_STANDARD_MASONRY_QMANUAL_SEG "Check to install qManualSeg plugin"
 if ( PLUGIN_STANDARD_MASONRY_QMANUAL_SEG )
 
     project( QMANUAL_SEG_PLUGIN )
-    
+
     AddPlugin( NAME ${PROJECT_NAME} )
 
 
@@ -20,7 +20,7 @@ if ( PLUGIN_STANDARD_MASONRY_QMANUAL_SEG )
 		PRIVATE
 			${CMAKE_CURRENT_SOURCE_DIR}
 	)
- 
+
 	# Find Packages
 	# Find PCL
 	#set( PCL_DIR "C:/Program Files/PCL 1.9.1") #DGM: can't do that as it will obviously conflict with most of the users settings ;)
@@ -46,7 +46,7 @@ if ( PLUGIN_STANDARD_MASONRY_QMANUAL_SEG )
 		# [C/C++]>[Preprocessor]>[Preprocessor Definitions]
 		add_definitions( ${PCL_DEFINITIONS} )
 
-		# For Use Not PreCompiled Features 
+		# For Use Not PreCompiled Features
 		#add_definitions( -DPCL_NO_PRECOMPILE )
 
 		# [Linker]>[General]>[Additional Library Directories]
